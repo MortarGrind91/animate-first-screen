@@ -1,0 +1,230 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    background: #323232;
+    background-size: cover;
+}
+
+.logo {
+    line-height: 40px;
+    float: left;
+    margin: 1.2em 0 0 2.2em;
+    font-weight: bolder;
+    color: #ffffff;
+}
+
+.nav {
+    line-height: 40px;
+    margin: 1.2em;
+    position: absolute;
+    right: 0;
+
+    ul {
+        li {
+            list-style: none;
+            display: inline-block;
+            color: #ffffff;
+            padding-right: 36px;
+        }
+    }
+}
+
+.social-media {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    ul {
+        li {
+            list-style: none;
+            color: #ffffff;
+            padding-top: 20px;
+        }
+    }
+}
+
+.side-strip {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -4em;
+    transform: rotate(90deg);
+    color: #ffffff;
+    letter-spacing: 4px;
+}
+
+.header {
+    position: absolute;
+    top: 38%;
+    left: 46%;
+    transform: translate(-50%, -50%);
+
+    h1 {
+        color: #ffffff;
+        font-weight: bolder;
+    }
+
+    p {
+        color: #ffffff;
+        font-weight: lighter;
+    }
+
+    button {
+        margin-top: 12px;
+        border: 1px solid #fff;
+
+        padding: 16px 40px;
+        color: #fff;
+        letter-spacing: 4px;
+        font-weight: 600;
+        font-size: 12px;
+        background: transparent;
+        cursor: pointer;
+        position: relative;
+        transition: all 0.5s;
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 0;
+            background: transparent;
+            border: 1px solid transparent;
+        }
+
+        &:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 0;
+            background: transparent;
+            border: 1px solid transparent;
+        }
+
+        &:hover {
+            border: 1px solid transparent;
+
+            &:before {
+                animation: borderLine 1s linear forwards;
+            }
+
+            &:after {
+                animation: borderLine2 1s linear forwards;
+                animation-delay: 1s;
+            }
+        }
+    }
+}
+
+@keyframes borderLine {
+    0% {
+        width: 0;
+        height: 0;
+        border-top-color: #fff;
+        border-right-color: transparent;
+        border-left-color: transparent;
+        border-bottom-color: transparent;
+    }
+
+    50% {
+        width: 100%;
+        height: 0;
+        border-top-color: #fff;
+        border-right-color: #fff;
+        border-left-color: transparent;
+        border-bottom-color: transparent;
+    }
+
+    100% {
+        width: 100%;
+        height: 100%;
+        border-top-color: #fff;
+        border-right-color: #fff;
+        border-left-color: transparent;
+        border-bottom-color: transparent;
+    }
+
+}
+
+@keyframes borderLine2 {
+    0% {
+        width: 0;
+        height: 0;
+        border-top-color: transparent;
+        border-right-color: transparent;
+        border-left-color: #fff;
+        border-bottom-color: transparent;
+    }
+
+    50% {
+        width: 0;
+        height: 100%;
+        border-top-color: transparent;
+        border-right-color: transparent;
+        border-left-color: #fff;
+        border-bottom-color: #fff;
+    }
+
+    100% {
+        width: 100%;
+        height: 100%;
+        border-top-color: transparent;
+        border-right-color: transparent;
+        border-left-color: #fff;
+        border-bottom-color: #fff;
+    }
+
+}
+
+.bottom-bar {
+    color: #ffffff;
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    right: 0;
+
+    h6 {
+        font-weight: bolder;
+        text-transform: uppercase;
+    }
+
+    p {
+        font-style: 14px;
+        font-weight: lighter;
+    }
+}
+
+.row {
+    padding: 2.6em 2.6em 2em 2.6em;
+    background: #000;
+    border-top-right-radius: 12px;
+    border-top-left-radius: 12px;
+}
+
+.overlay {
+    z-index: 1;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background: #ffffff;
+    top: 0%;
+
+    h1 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 20px;
+        font-weight: bolder;
+    }
+}
